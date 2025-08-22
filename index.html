@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lotus Wok • Modern Chinese Kitchen</title>
+    <meta name="description" content="Lotus Wok – Fresh, modern Chinese flavors with a cozy vibe." />
+    <link rel="preload" as="image" href="assets/1.png">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav class="nav">
+        <div class="container nav-inner">
+            <div class="brand">
+                <img src="assets/1.png" alt="Lotus Wok Logo">
+                <h1>Lotus <span>Wok</span></h1>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#about">About</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+                <button class="cta"
+                    onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Book a
+                    Table</button>
+            </div>
+            <button class="menu-toggle" id="menuToggle">Menu</button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header id="home" class="hero">
+        <div class="container wrap">
+            <div>
+                <div class="badge">Since 2024 • Family Friendly • Dine-in & Takeaway</div>
+                <h2 class="headline reveal">Modern <span class="accent">Chinese Flavours</span>, crafted fresh every
+                    day.</h2>
+                <p class="sub reveal">From sizzling wok-tossed noodles to cozy soups and street-style bites — we serve
+                    comfort with a contemporary twist.</p>
+                <div class="hero-cta reveal">
+                    <a href="#menu" class="btn primary">Explore Menu</a>
+                    <a href="#contact" class="btn">Order / Reserve</a>
+                </div>
+            </div>
+            <div class="hero-art reveal">
+                <div class="art-grid">
+                    <figure class="card" style="position:relative">
+                        <span class="tag">Chef’s Pick</span>
+                        <img class="cover" src="assets/download (4).jpg" alt="Chow Mein">
+                    </figure>
+                    <figure class="card" style="position:relative">
+                        <span class="tag">Best Seller</span>
+                        <img class="cover" src="assets/pizza.jpg" alt="Stuffed Crust Pizza">
+                    </figure>
+                    <figure class="card" style="position:relative">
+                        <span class="tag">Fresh & Crisp</span>
+                        <img class="cover" src="assets/download (5).jpg" alt="Caesar Salad">
+                    </figure>
+                    <figure class="card" style="position:relative">
+                        <span class="tag">Hot & Satisfying</span>
+                        <img class="cover" src="assets/download (1).jpg" alt="Veggie Burger">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MENU -->
+    <section id="menu">
+        <div class="container">
+            <h3 class="section-title">Our Menu</h3>
+            <p class="section-sub">Pick a category to filter. Everything is prepared fresh with premium ingredients.</p>
+
+            <div class="filters">
+                <button class="chip active" data-filter="all">All</button>
+                <button class="chip" data-filter="noodles">Noodles</button>
+                <button class="chip" data-filter="pizza">Pizza</button>
+                <button class="chip" data-filter="salad">Salad</button>
+                <button class="chip" data-filter="burger">Burger</button>
+                <button class="chip" data-filter="sandwich">Sandwich</button>
+                <button class="chip" data-filter="drinks">Drinks</button>
+            </div>
+
+            <div class="grid" id="menuGrid">
+                <!-- PIZZA -->
+                <article class="menu-card reveal" data-cat="pizza">
+                    <img class="menu-img" src="assets/download (3).jpg" alt="Onion Cheese Pizza">
+                    <div class="menu-body">
+                        <div class="title-row">
+                            <h4>Onion Cheese Pizza</h4><span class="price">$30</span>
+                        </div>
+                        <p class="desc">Classic base topped with sweet onions & gooey cheese.</p>
+                        <button class="add"><span>Add to Order</span> ➕</button>
+                    </div>
+                </article>
+
+                <article class="menu-card reveal" data-cat="salad">
+                    <img class="menu-img" src="assets/download (5).jpg" alt="Caesar Salad">
+                    <div class="menu-body">
+                        <div class="title-row">
+                            <h4>Caesar Salad</h4><span class="price">$10</span>
+                        </div>
+                        <p class="desc">Crisp romaine, croutons & a zingy creamy dressing.</p>
+                        <button class="add"><span>Add to Order</span> ➕</button>
+                    </div>
+                </article>
+
+                <article class="menu-card reveal" data-cat="noodles">
+                    <img class="menu-img" src="assets/download (4).jpg" alt="Chow Mein">
+                    <div class="menu-body">
+                        <div class="title-row">
+                            <h4>Chow Mein Noodles</h4><span class="price">$25</span>
+                        </div>
+                        <p class="desc">Wok-tossed noodles with garden veggies & umami sauce.</p>
+                        <button class="add"><span>Add to Order</span> ➕</button>
+                    </div>
+                </article>
+
+                <article class="menu-card reveal" data-cat="burger">
+                    <img class="menu-img" src="assets/download (1).jpg" alt="Veggie Burger">
+                    <div class="menu-body">
+                        <div class="title-row">
+                            <h4>Veggie Burger</h4><span class="price">$35</span>
+                        </div>
+                        <p class="desc">Hearty patty, fresh lettuce, house sauce & toasted bun.</p>
+                        <button class="add"><span>Add to Order</span> ➕</button>
+                    </div>
+                </article>
+
+                <article class="menu-card reveal" data-cat="sandwich">
+                    <img class="menu-img" src="assets/sandwich.jpg" alt="Roast Sandwich">
+                    <div class="menu-body">
+                        <div class="title-row">
+                            <h4>Roast Sandwich</h4><span class="price">$20</span>
+                        </div>
+                        <p class="desc">Slow-roast filling with crunchy slaw on artisan bread.</p>
+                        <button class="add"><span>Add to Order</span> ➕</button>
+                    </div>
+                </article>
+
+                <article class="menu-card reveal" data-cat="pizza">
+                    <img class="menu-img" src="assets/pizza.jpg" alt="Stuffed Crust Pizza">
+                    <div class="menu-body">
+                        <div class="title-row">
+                            <h4>Stuffed Crust Pizza</h4><span class="price">$50</span>
+                        </div>
+                        <p class="desc">Cheese baked right into the crust; pure indulgence.</p>
+                        <button class="add"><span>Add to Order</span> ➕</button>
+                    </div>
+                </article>
+
+                <article class="menu-card reveal" data-cat="drinks">
+                    <img class="menu-img" src="assets/coldrink.jpg" alt="Soft Drinks">
+                    <div class="menu-body">
+                        <div class="title-row">
+                            <h4>Soft Drinks</h4><span class="price">$5</span>
+                        </div>
+                        <p class="desc">Chilled, fizzy, and refreshing. Perfect with meals.</p>
+                        <button class="add"><span>Add to Order</span> ➕</button>
+                    </div>
+                </article>
+
+                <article class="menu-card reveal" data-cat="sandwich">
+                    <img class="menu-img" src="assets/download (8).jpg" alt="Grilled Cheese">
+                    <div class="menu-body">
+                        <div class="title-row">
+                            <h4>Grilled Cheese</h4><span class="price">$25</span>
+                        </div>
+                        <p class="desc">Golden-toasted bread hugging molten cheese.</p>
+                        <button class="add"><span>Add to Order</span> ➕</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider container" aria-hidden="true"></div>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="container about">
+            <div class="photo reveal">
+                <img src="assets/images.jpg" alt="Our Kitchen">
+            </div>
+            <div>
+                <h3 class="section-title">About Lotus Wok</h3>
+                <p class="section-sub">We started with a simple idea — bring the warmth of Chinese street food to a
+                    modern, cozy space. Our chefs blend tradition with a touch of creativity for consistently delicious
+                    results.</p>
+                <ul class="list">
+                    <li><span class="dot"></span>Daily fresh prep & quality ingredients.</li>
+                    <li><span class="dot"></span>Vegetarian-friendly options in every category.</li>
+                    <li><span class="dot"></span>Hygienic kitchen & speedy service.</li>
+                    <li><span class="dot"></span>Dine-in, takeaway & party orders.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+        <div class="container">
+            <h3 class="section-title">Gallery</h3>
+            <p class="section-sub">A glimpse of our favorites — tap to view.</p>
+            <div class="gallery">
+                <img src="assets/download (4).jpg" alt="Chow Mein" class="reveal">
+                <img src="assets/pizza.jpg" alt="Stuffed Pizza" class="reveal">
+                <img src="assets/download (5).jpg" alt="Salad" class="reveal">
+                <img src="assets/download (1).jpg" alt="Burger" class="reveal">
+                <img src="assets/sandwich.jpg" alt="Sandwich" class="reveal">
+                <img src="assets/coldrink.jpg" alt="Soft Drink" class="reveal">
+                <img src="assets/download (3).jpg" alt="Onion Cheese Pizza" class="reveal">
+                <img src="assets/download (8).jpg" alt="Grilled Cheese" class="reveal">
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" aria-modal="true" role="dialog">
+        <img src="" alt="Preview">
+    </div>
+
+    <!-- REVIEWS -->
+    <section id="reviews">
+        <div class="container">
+            <h3 class="section-title">What Guests Say</h3>
+            <p class="section-sub">We love feedback — and we’re proud of the smiles we serve.</p>
+            <div class="quotes">
+                <blockquote class="quote reveal">
+                    <div class="stars">★★★★★</div>
+                    “Best chow mein in town. Perfectly smoky and balanced!”
+                    <div class="who">— Aditi</div>
+                </blockquote>
+                <blockquote class="quote reveal">
+                    <div class="stars">★★★★★</div>
+                    “Stuffed crust pizza is cheesy heaven. Cozy ambience too.”
+                    <div class="who">— Karan</div>
+                </blockquote>
+                <blockquote class="quote reveal">
+                    <div class="stars">★★★★☆</div>
+                    “Quick service and fresh flavors. Great for weeknight dinners.”
+                    <div class="who">— Nikhil</div>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="container contact-wrap">
+            <form id="contactForm">
+                <h3 class="section-title">Reserve / Order</h3>
+                <p class="section-sub">Tell us what you need and we’ll get back quickly.</p>
+                <label for="name">Name</label>
+                <input id="name" name="name" placeholder="Your full name" required />
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" placeholder="98765 43210" required />
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Table for 4 at 8 PM, or list your order…"></textarea>
+                <button class="send">Send Request</button>
+                <p id="formNote" class="section-sub hide" style="margin-top:10px">Thanks! We’ll confirm shortly.</p>
+            </form>
+
+            <aside class="address">
+                <h4>Visit Us</h4>
+                <div class="addr-row">📍 Near City Center, Main Street</div>
+                <div class="addr-row">🕒 Daily 11:00 AM – 11:00 PM</div>
+                <div class="addr-row">☎️ +91 98765 43210</div>
+                <div class="addr-row">✉️ hello@lotuswok.example</div>
+                <div class="divider" aria-hidden="true"></div>
+                <h4>Follow</h4>
+                <div class="socials">
+                    <img src="assets/insta.jpg" alt="Instagram">
+                    <img src="assets/telegram.png" alt="Telegram">
+                    <img src="assets/twiter.png" alt="Twitter/X">
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container"
+            style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center">
+            <p>© 2024 Lotus Wok • All rights reserved.</p>
+            <a class="badge" href="#home">Back to top ↑</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
